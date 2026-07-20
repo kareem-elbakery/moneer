@@ -26,6 +26,7 @@ export default function Navbar({ language, onToggleLanguage, t }) {
     { href: "#achievements", label: t.nav.achievements },
     { href: "#transformations", label: t.nav.transformations },
     { href: "#packages", label: t.nav.packages },
+    { href: "#booking", label: t.nav.booking },
     { href: "#contact", label: t.nav.contact },
   ];
 

@@ -24,6 +24,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "yet-another-react-lightbox/styles.css";
 
+import BookingForm from "./components/BookingForm.jsx";
 import Footer from "./components/Footer.jsx";
 import ImageGallery from "./components/ImageGallery.jsx";
 import Navbar from "./components/Navbar.jsx";
@@ -441,6 +442,7 @@ export default function App() {
         <WhyChooseMe t={t} />
         <Packages t={t} />
         <CoachGallery t={t} />
+        <BookingForm t={t} />
         <Contact t={t} />
       </main>
       <Footer t={t} />
