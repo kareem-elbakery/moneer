@@ -31,7 +31,6 @@ export default function ImageGallery({
               alt={`${alt} ${imageIndex + 1}`}
               loading="lazy"
               decoding="async"
-              style={{ aspectRatio: "auto" }}
             />
             {showCaption ? (
               <span className="image-caption">{captions[imageIndex % captions.length]}</span>
