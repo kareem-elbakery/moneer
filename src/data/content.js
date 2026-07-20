@@ -50,7 +50,7 @@ export const copy = {
         "International Coaching Experience",
       ],
       stats: [
-        { value: 10, suffix: "+", label: "Years Experience" },
+        { value: 19, suffix: "+", label: "Years Experience" },
         { value: 6, suffix: "+", label: "Elite Certifications" },
         { value: 4, suffix: "+", label: "Countries Competed" },
         { value: 100, suffix: "%", label: "Personalized Plans" },
