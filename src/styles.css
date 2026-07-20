@@ -1453,50 +1453,59 @@ html[dir="rtl"] .field-group select {
     font-size: 1.78rem;
   }
 
+  /* Certificates gallery - full width cards like masonry */
+  .image-grid {
+    display: block;
+    column-count: 1;
+    column-gap: 16px;
+  }
+
   .image-grid .image-tile,
   .certificate-gallery .image-tile,
   .transformation-gallery .image-tile {
-    aspect-ratio: auto !important;
-    overflow: visible !important;
-    min-height: auto !important;
-    border: 1px solid var(--line) !important;
-    background: var(--panel) !important;
-    box-shadow: none !important;
-    padding: 0 !important;
+    display: block;
+    width: 100%;
+    margin: 0 0 20px;
+    break-inside: avoid;
+    aspect-ratio: auto;
+    min-height: auto;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--panel);
+    box-shadow: none;
   }
 
   .image-grid .image-tile img,
   .certificate-gallery .image-tile img,
   .transformation-gallery .image-tile img {
-    position: relative !important;
-    width: 100% !important;
-    height: auto !important;
-    aspect-ratio: auto !important;
-    object-fit: contain !important;
-    display: block !important;
-    background: transparent !important;
-    transition: none !important;
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: auto;
+    object-fit: cover;
+    transition: none;
   }
 
   .image-tile::before {
-    display: none !important;
+    display: none;
   }
 
   .image-tile:hover {
-    border-color: var(--line) !important;
+    border-color: var(--line);
   }
 
   .image-tile:hover img {
-    transform: none !important;
-    filter: none !important;
+    transform: none;
+    filter: none;
   }
 
   .image-caption {
-    position: static !important;
-    opacity: 1 !important;
-    transform: none !important;
+    position: static;
+    opacity: 1;
+    transform: none;
     margin-top: 8px;
-    padding: 0;
+    padding: 0 12px 12px;
     color: var(--muted);
     font-size: 0.82rem;
     font-weight: 600;
@@ -1504,14 +1513,14 @@ html[dir="rtl"] .field-group select {
   }
 
   .championship-slide {
-    aspect-ratio: auto !important;
-    min-height: auto !important;
+    aspect-ratio: auto;
+    min-height: auto;
   }
   
   .championship-slide img {
-    height: auto !important;
-    aspect-ratio: auto !important;
-    object-fit: contain !important;
+    height: auto;
+    aspect-ratio: auto;
+    object-fit: contain;
   }
 
   .brand-mark span {
