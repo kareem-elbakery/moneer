@@ -1326,6 +1326,10 @@ html[dir="rtl"] .field-group select {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .image-grid .image-tile img {
+    height: auto !important;
+  }
+
   .pricing-grid {
     grid-template-columns: 1fr;
     max-width: 720px;
@@ -1449,62 +1453,65 @@ html[dir="rtl"] .field-group select {
     font-size: 1.78rem;
   }
 
-  .image-grid {
-    grid-template-columns: 1fr;
-    gap: 14px;
-  }
-
   .image-grid .image-tile,
   .certificate-gallery .image-tile,
   .transformation-gallery .image-tile {
-    aspect-ratio: auto;
-    min-height: auto;
+    aspect-ratio: auto !important;
+    overflow: visible !important;
+    min-height: auto !important;
+    border: 1px solid var(--line) !important;
+    background: var(--panel) !important;
+    box-shadow: none !important;
+    padding: 0 !important;
   }
 
-  .image-tile {
-    background: transparent;
-    border: none;
-    box-shadow: none;
-    padding: 0;
-  }
-
-  .image-tile img,
+  .image-grid .image-tile img,
   .certificate-gallery .image-tile img,
   .transformation-gallery .image-tile img {
-    width: 100%;
-    height: auto;
-    aspect-ratio: auto;
-    object-fit: contain;
-    border: 1px solid var(--line);
-    border-radius: var(--radius);
-    background: var(--panel);
+    position: relative !important;
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: auto !important;
+    object-fit: contain !important;
+    display: block !important;
+    background: transparent !important;
+    transition: none !important;
   }
 
   .image-tile::before {
-    display: none;
+    display: none !important;
+  }
+
+  .image-tile:hover {
+    border-color: var(--line) !important;
+  }
+
+  .image-tile:hover img {
+    transform: none !important;
+    filter: none !important;
   }
 
   .image-caption {
-    position: static;
-    opacity: 1;
-    transform: none;
-    margin-top: 6px;
+    position: static !important;
+    opacity: 1 !important;
+    transform: none !important;
+    margin-top: 8px;
     padding: 0;
     color: var(--muted);
-    font-size: 0.78rem;
+    font-size: 0.82rem;
     font-weight: 600;
     text-align: center;
   }
 
   .championship-slide {
-    aspect-ratio: auto;
-    min-height: auto;
+    aspect-ratio: auto !important;
+    min-height: auto !important;
   }
   
   .championship-slide img {
-    height: auto;
-    aspect-ratio: auto;
-    object-fit: contain;
+    height: auto !important;
+    aspect-ratio: auto !important;
+    object-fit: contain !important;
   }
 
   .brand-mark span {
