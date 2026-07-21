@@ -8,16 +8,18 @@ export default function Footer({ t }) {
         <span>تصميم وتطوير الموقع بواسطة</span>
         <strong>كريم البكري</strong>
       </div>
-      <a
-        className="developer-whatsapp"
-        href={`https://wa.me/${contact.developerWhatsapp}`}
-        target="_blank"
-        rel="noreferrer"
-        aria-label={`واتساب ${contact.developerPhone}`}
-      >
-        <FaWhatsapp aria-hidden="true" />
-        <span dir="ltr">{contact.developerPhone}</span>
-      </a>
+      <div className="footer-socials">
+        <a
+          className="developer-whatsapp"
+          href={`https://wa.me/${contact.developerWhatsapp}`}
+          target="_blank"
+          rel="noreferrer"
+          aria-label={`واتساب ${contact.developerPhone}`}
+        >
+          <FaWhatsapp aria-hidden="true" />
+          <span dir="ltr">{contact.developerPhone}</span>
+        </a>
+      </div>
     </footer>
   );
 }

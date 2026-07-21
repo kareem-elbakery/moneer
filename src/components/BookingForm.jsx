@@ -6,18 +6,16 @@ function buildWhatsAppMessage(data, t) {
   const lines = [
     `👤 *${t.booking.nameLabel}:* ${data.name}`,
     `📞 *${t.booking.phoneLabel}:* ${data.phone}`,
-    `🎂 *${t.booking.ageLabel}:* ${data.age}`,
-    `🎯 *${t.booking.goalLabel}:* ${data.goal}`,
-    `📦 *${t.booking.packageLabel}:* ${data.package}`,
-    `⚖️ *${t.booking.weightLabel}:* ${data.weight}`,
-    `📏 *${t.booking.heightLabel}:* ${data.height}`,
-    `💪 *${t.booking.experienceLabel}:* ${data.experience}`,
-    `🩺 *${t.booking.injuriesLabel}:* ${data.injuries}`,
   ];
 
-  if (data.notes) {
-    lines.push(`📝 *${t.booking.notesLabel}:* ${data.notes}`);
-  }
+  if (data.age) lines.push(`🎂 *${t.booking.ageLabel}:* ${data.age}`);
+  if (data.goal) lines.push(`🎯 *${t.booking.goalLabel}:* ${data.goal}`);
+  if (data.package) lines.push(`📦 *${t.booking.packageLabel}:* ${data.package}`);
+  if (data.weight) lines.push(`⚖️ *${t.booking.weightLabel}:* ${data.weight}`);
+  if (data.height) lines.push(`📏 *${t.booking.heightLabel}:* ${data.height}`);
+  if (data.experience) lines.push(`💪 *${t.booking.experienceLabel}:* ${data.experience}`);
+  if (data.injuries) lines.push(`🩺 *${t.booking.injuriesLabel}:* ${data.injuries}`);
+  if (data.notes) lines.push(`📝 *${t.booking.notesLabel}:* ${data.notes}`);
 
   return lines.join("\n");
 }
@@ -51,15 +49,7 @@ export default function BookingForm({ t }) {
     window.open(url, "_blank", "noopener,noreferrer");
   };
 
-  const isFormValid =
-    form.name.trim() &&
-    form.phone.trim() &&
-    form.age.trim() &&
-    form.goal &&
-    form.package &&
-    form.weight.trim() &&
-    form.height.trim() &&
-    form.experience;
+  const isFormValid = form.name.trim() && form.phone.trim();
 
   return (
     <section className="section booking-section" id="booking">
@@ -99,7 +89,9 @@ export default function BookingForm({ t }) {
                 required
               />
             </div>
+          </div>
 
+          <div className="booking-grid">
             {/* العمر */}
             <div className="field-group">
               <label htmlFor="booking-age">{t.booking.ageLabel}</label>
@@ -112,7 +104,6 @@ export default function BookingForm({ t }) {
                 value={form.age}
                 onChange={handleChange}
                 placeholder={t.booking.agePlaceholder}
-                required
               />
             </div>
 
@@ -124,7 +115,6 @@ export default function BookingForm({ t }) {
                 name="goal"
                 value={form.goal}
                 onChange={handleChange}
-                required
               >
                 <option value="" disabled>
                   -- {t.booking.goalLabel} --
@@ -145,7 +135,6 @@ export default function BookingForm({ t }) {
                 name="package"
                 value={form.package}
                 onChange={handleChange}
-                required
               >
                 <option value="" disabled>
                   -- {t.booking.packageLabel} --
@@ -170,7 +159,6 @@ export default function BookingForm({ t }) {
                 value={form.weight}
                 onChange={handleChange}
                 placeholder={t.booking.weightPlaceholder}
-                required
               />
             </div>
 
@@ -186,7 +174,6 @@ export default function BookingForm({ t }) {
                 value={form.height}
                 onChange={handleChange}
                 placeholder={t.booking.heightPlaceholder}
-                required
               />
             </div>
 
@@ -200,7 +187,6 @@ export default function BookingForm({ t }) {
                 name="experience"
                 value={form.experience}
                 onChange={handleChange}
-                required
               >
                 <option value="" disabled>
                   -- {t.booking.experienceLabel} --
@@ -224,7 +210,6 @@ export default function BookingForm({ t }) {
               value={form.injuries}
               onChange={handleChange}
               placeholder={t.booking.injuriesPlaceholder}
-              required
             />
           </div>
 

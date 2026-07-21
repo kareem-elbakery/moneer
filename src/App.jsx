@@ -12,10 +12,12 @@ import {
   FaFacebookF,
   FaGlobe,
   FaHeartbeat,
+  FaInstagram,
   FaMedal,
   FaPhoneAlt,
   FaShieldAlt,
   FaStethoscope,
+  FaTiktok,
   FaTrophy,
   FaUserCheck,
   FaWhatsapp,
@@ -352,6 +354,8 @@ function Contact({ t }) {
     },
     { label: t.contact.call, href: `tel:+${contact.coachPhoneInternational}`, icon: FaPhoneAlt },
     { label: t.contact.facebook, href: contact.facebook, icon: FaFacebookF },
+    { label: t.contact.instagram, href: contact.instagram, icon: FaInstagram },
+    { label: t.contact.tiktok, href: contact.tiktok, icon: FaTiktok },
     { label: t.contact.emailButton, href: `mailto:${contact.email}`, icon: FaEnvelope },
   ];
 
@@ -375,6 +379,22 @@ function Contact({ t }) {
               <dd>
                 <a href={contact.facebook} target="_blank" rel="noreferrer">
                   MounierElsherbini
+                </a>
+              </dd>
+            </div>
+            <div>
+              <dt>{t.contact.instagram}</dt>
+              <dd>
+                <a href={contact.instagram} target="_blank" rel="noreferrer">
+                  @mounier_mohamed
+                </a>
+              </dd>
+            </div>
+            <div>
+              <dt>{t.contact.tiktok}</dt>
+              <dd>
+                <a href={contact.tiktok} target="_blank" rel="noreferrer">
+                  @mouneir_mohamed
                 </a>
               </dd>
             </div>
